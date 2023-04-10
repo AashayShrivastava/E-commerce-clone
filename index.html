@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@100&family=Roboto+Slab:wght@500&family=Roboto:ital,wght@0,100;0,400;0,500;1,900&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Custom style to prevent carousel from being distorted 
+   if for some reason image doesn't load */
+        .carousel-item {
+            min-height: 280px;
+        }
+
+        img {
+            height: 200px;
+            width: 90vw;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#myBtn").click(function () {
+                var myCarousel = Carousel.getOrCreateInstance($("#myCarousel")[0]);
+                console.log(myCarousel);
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .hea {
+            position: sticky;
+            z-index: 2;
+            top: 0px;
+        }
+
+        body {
+            background-color: #75b99f;
+        }
+
+        #a {
+            background-color: #7272b9;
+            height: 63px;
+            width: 100%;
+
+        }
+
+        #j {
+            float: left;
+            height: 58px;
+            width: 220px;
+            margin-top: 2px;
+            margin-left: 5px;
+        }
+
+        #imga {
+            height: 58px;
+            width: 220px;
+            float: left;
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+
+
+        #c {
+            display: flex;
+            list-style: none;
+            float: left;
+            margin-top: 20px;
+            margin-left: 5px;
+            font-size: 17px;
+        }
+
+        #g {
+            text-decoration: none;
+            color: white;
+            margin-right: 11px;
+        }
+
+        #h {
+            text-decoration: none;
+            color: white;
+            margin-right: 11px;
+        }
+
+        #i {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        #g:hover {
+            color: black;
+        }
+
+        #h:hover {
+            color: black;
+        }
+
+        #i:hover {
+            color: black;
+        }
+
+
+
+        .search {
+            float: right;
+            margin-top: 16px;
+            margin-right: 5px;
+        }
+
+        .seainp {
+            width: 27vw;
+            height: 30px;
+            border-radius: 6px;
+        }
+
+        #bt1 {
+            float: right;
+            margin-top: 19px;
+            margin-right: 11px;
+            background-color: blue;
+            color: white;
+            border: 2px solid black;
+            font-size: 17px;
+            padding: 0 5px;
+        }
+
+        #abc {
+            margin-top: 0px;
+            margin-left: 4px;
+            margin-right: 1px;
+        }
+
+
+        .heacard {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+
+        }
+
+        .heaex {
+            display: flex;
+
+
+        }
+
+        .heacard1 {
+            height: 162px;
+            width: 215px;
+            margin-right: 5px;
+
+            display: flex;
+            margin-left: 5px;
+
+
+
+            justify-content: center;
+        }
+
+
+        .hecard2 {
+            height: 152px;
+            width: 203px;
+
+        }
+
+        .hecard2:hover {
+            height: 162px;
+            width: 215px;
+        }
+
+        .my-3 {
+            height: 243px;
+        }
+
+
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl,
+        .container-xxl {
+            max-width: 98vw;
+        }
+
+        .container,
+        .container-fluid,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl,
+        .container-xxl {
+            width: 100%;
+            padding-right: var(--bs-gutter-x, .75rem);
+            padding-left: var(--bs-gutter-x, .75rem);
+            margin-right: auto;
+            margin-left: auto;
+            margin: auto;
+        }
+
+        .carousel {
+            height: 243px;
+        }
+
+        .carousel-inner {
+            height: 243px;
+        }
+
+        .w-100 {
+            height: 243px;
+
+        }
+
+        .maincont {
+            margin: auto;
+            width: 95vw;
+            height: 298px;
+            background-color: white;
+            margin-top: 10px;
+        }
+
+        .left {
+            position: relative;
+            z-index: 1;
+            top: 271px;
+            width: 200px;
+        }
+
+        .right {
+            position: relative;
+            float: right;
+            bottom: 24px;
+            top: -24px;
+            width: 82px;
+        }
+
+        .mp1 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 23px;
+        }
+
+        .mp5 {
+            width: 95vw;
+            margin: auto;
+            height: 217px;
+            background-color: white;
+        }
+
+        .mp4 {
+            height: 163px;
+            width: 207px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 6px;
+        }
+
+
+        .mp3 {
+            height: 221px;
+            width: 228px;
+            display: inline-block;
+
+            overflow: auto;
+            white-space: nowrap;
+            text-align: center;
+
+        }
+
+        .mp2 {
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            width: 95vw;
+            background-color: blanchedalmond;
+            overflow: hidden;
+            white-space: nowrap;
+            height: 218px;
+            background-color: white;
+
+        }
+
+        .fabove {
+            display: block;
+            width: 50px;
+            text-align: center;
+            margin: auto;
+            margin-top: auto;
+            text-decoration: none;
+            color: black;
+            border: 2px solid red;
+            margin-top: 9px;
+            background-color: #ca946d;
+        }
+
+        .butt {
+            background-color: #372626;
+            color: white;
+        }
+
+        footer {
+            background-color: blue;
+            height: 77px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            color: white;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        @media screen and (max-width:450px) {
+            .na {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+            }
+
+            #a {
+                height: 156px;
+                background-color: #7272b9;
+            }
+
+            #j {
+                float: none;
+                margin-left: 0px;
+            }
+
+            #imga {
+                float: none;
+
+            }
+
+            .search {
+                float: none;
+                margin-top: 0px;
+                margin-right: 0px
+            }
+
+            .seainp {
+                width: 313px;
+
+            }
+
+            #bt1 {
+                margin-top: 5px;
+                margin-right: 0px;
+            }
+
+            #c {
+                float: none;
+                margin-top: 0px;
+                margin-left: -33px;
+                font-size: 15px;
+
+            }
+
+            #abc {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width:371px) {
+            .seainp {
+                width: 230px;
+
+            }
+        }
+
+        @media screen and (max-width:860px) {
+            #a {
+                height: 91px;
+                background-color: #7272b9;
+            }
+
+            #j {
+                float: left;
+                height: 58px;
+                width: 220px;
+                margin-top: 14px;
+                margin-left: 5px;
+            }
+
+            #c {
+                position: absolute;
+                right: 23px;
+                float: none;
+                margin-top: 0px;
+            }
+
+            .search {
+                position: absolute;
+                right: 0px;
+                top: 26px;
+                margin-right: 2px;
+                margin-top: 0px;
+            }
+
+            .seainp {
+                width: 223px;
+                height: 30px;
+                border-radius: 6px;
+            }
+
+            #abc {
+                font-size: 14px;
+                margin-top: 0px;
+                margin-left: 4px;
+                margin-right: 1px;
+            }
+
+            #bt1 {
+                position: absolute;
+                top: 58px;
+                right: 116px;
+                float: none;
+                margin-top: 0px;
+                margin-right: 0px;
+            }
+
+        }
+
+        @media screen and (max-width:520px) {
+            #a {
+                height: 91px;
+                background-color: #7272b9;
+            }
+
+            #j {
+                float: left;
+                height: 58px;
+                width: 165px;
+                margin-top: 14px;
+                margin-left: 5px;
+            }
+
+            #imga {
+                height: 58px;
+                width: 165px;
+                float: left;
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+
+            #c {
+                position: absolute;
+                right: 23px;
+                float: none;
+                margin-top: 0px;
+                font-size: 16px;
+            }
+
+            .search {
+                position: absolute;
+                right: 0px;
+                top: 26px;
+                margin-right: 2px;
+                margin-top: 0px;
+            }
+
+            .seainp {
+                width: 223px;
+                height: 30px;
+                border-radius: 6px;
+            }
+
+            #abc {
+                font-size: 14px;
+                margin-top: 0px;
+                margin-left: 4px;
+                margin-right: 1px;
+            }
+
+            #bt1 {
+                position: absolute;
+                top: 58px;
+                right: 116px;
+                float: none;
+                margin-top: 0px;
+                margin-right: 0px;
+            }
+        }
+
+        @media screen and (max-width:452px) {
+            .na {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+            }
+
+            #a {
+                height: 156px;
+                background-color: #7272b9;
+
+                width: 100%;
+            }
+
+            #j {
+                float: none;
+                margin-left: 0px;
+
+                height: 58px;
+                width: 189px;
+                margin-top: 2px;
+                margin-left: 5px;
+            }
+
+            #imga {
+                float: none;
+                height: 58px;
+                width: 189px;
+
+                margin-top: 0px;
+                margin-left: 0px;
+
+            }
+
+            .search {
+                float: none;
+                margin-top: -13px;
+                margin-right: 0px;
+                position: static;
+
+            }
+
+            .seainp {
+                width: 313px;
+                height: 30px;
+                border-radius: 6px;
+
+            }
+
+            #bt1 {
+                margin-top: 5px;
+                margin-right: 0px;
+
+                background-color: blue;
+                color: white;
+                border: 2px solid black;
+                font-size: 17px;
+                padding: 0 5px;
+                position: static;
+            }
+
+            #c {
+                float: none;
+                margin-top: 0px;
+                margin-left: -33px;
+                font-size: 17px;
+                display: flex;
+                list-style: none;
+                display: flex;
+                list-style: none;
+                position: static;
+
+
+
+
+
+            }
+
+            #abc {
+                font-size: 12px;
+                margin-top: 0px;
+                margin-left: 4px;
+                margin-right: 1px;
+            }
+        }
+
+        @media screen and (max-width:371px) {
+            .seainp {
+                width: 230px;
+                height: 30px;
+                border-radius: 6px;
+
+            }
+        }
+
+        @media screen and (max-width:1358px) {
+            .heacard {
+                display: inline-block;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                width: 100%;
+
+                overflow: scroll;
+                white-space: nowrap;
+                height: 255px;
+                background-color: #75b99f;
+
+            }
+
+            .sclea {
+                text-align: center;
+                width: 215px;
+                display: inline-block;
+            }
+
+            .left100 {
+                position: absolute;
+                top: 274px;
+            }
+
+            .butt0 {
+                background-color: black;
+                color: white;
+            }
+
+            .right100 {
+                position: absolute;
+                right: 0px;
+            }
+
+        }
+
+        @media screen and (max-width:860px) {
+            .left100 {
+                position: absolute;
+                top: 301px;
+            }
+
+        }
+
+        @media screen and (max-width:452px) {
+            .left100 {
+                position: absolute;
+                top: 366px;
+            }
+
+        }
+
+        @media screen and (min-width:1358px) {
+            .left100 {
+                display: none;
+            }
+
+            .right100 {
+                display: none;
+            }
+
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <a name="topper"></a>
+    <header class="hea" id="a">
+        <nav class="na" id="b">
+            <div class="hdi" id="j">
+                <img class="img1" id="imga" src="images/logo.jpg" alt="This is logo">
+            </div>
+
+            <ul class="unli" id="c">
+                <li class="li1" id="d"><a class="a1" id="g" href="home.html">Home</a></li>
+                <li class="li1" id="e"><a class="a1" id="h" href="about.html">About Us</a></li>
+                <li class="li1" id="f"><a class="a1" id="i" href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <div class="search">
+                <input class="seainp" type="text" name="" id="">
+                <button class="btn1" id="abc">search</button>
+            </div>
+            <button class="btn1" id="bt1">login</button>
+
+        </nav>
+    </header>
+
+
+    <div class="heacard" id="content0">
+        <div class="left100">
+
+            <button id="left-button0" class="butt0">
+                left-button
+            </button>
+        </div>
+
+
+
+
+        <div class="sclea" style="text-align: center;">
+            <div class="heacard1">
+                <a href="#link5"><img class="hecard2" src="images/beautypro.jpeg" alt="Beauty products"></a>
+            </div>
+
+            <div>Beauty<br>Products</div>
+        </div>
+
+
+
+
+        <div class="sclea" style="text-align: center;">
+            <div class="heacard1">
+                <a href="#link6"><img class="hecard2" src="images/shoes.jpeg" alt="Beauty products"></a>
+            </div>
+
+            <div>Shoes<br>Items</div>
+        </div>
+
+
+
+        <div class="sclea" style="text-align: center;">
+            <div class="heacard1">
+                <a href="#link7"><img class="hecard2" src="images/electronics.jpg" alt="Beauty products"></a>
+            </div>
+
+            <div>Electronic<br>Items</div>
+        </div>
+
+
+
+
+
+        <div class="sclea" style="text-align: center;">
+            <div class="heacard1">
+                <a href="#link8"><img class="hecard2" src="images/musical instruments.jpg" alt="Beauty products"></a>
+            </div>
+
+            <div>Musical<br> Instruments</div>
+        </div>
+
+
+
+        <div class="sclea" style="text-align: center;">
+            <div class="heacard1">
+                <a href="#link9"><img class="hecard2" src="images/toys.jpg" alt="Beauty products"></a>
+            </div>
+
+            <div>Toys For<br>Kids</div>
+        </div>
+        <div class="sclea" style="text-align: center;">
+            <div class="heacard1">
+                <a href="#link10"><img class="hecard2" src="images/grocery.jpg" alt="Beauty products"></a>
+            </div>
+
+            <div>Grocery<br>Products</div>
+        </div>
+        <div class="right100">
+            <button id="right-button0" class="butt0">
+                swipe right
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        const rightBtn0 = document.querySelector('#right-button0');
+        const leftBtn0 = document.querySelector('#left-button0');
+
+        rightBtn0.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content0');
+            conent.scrollLeft += 300;
+            event.preventDefault();
+        });
+
+        leftBtn0.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content0');
+            conent.scrollLeft -= 300;
+            event.preventDefault();
+        });
+    </script>
+
+
+    </div>
+
+
+
+
+
+    <div class="container-lg my-3">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for carousel items -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/mainbox2.jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/mainbox3.jpg" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/mainbox1.jpg" class="d-block w-100" alt="Slide 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/mainbox4.png" class="d-block w-100" alt="Slide 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/mainbox5.jpg" class="d-block w-100" alt="Slide 3">
+                </div>
+            </div>
+
+            <!-- Carousel controls -->
+            <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="bodymain">
+
+
+
+        <a name="link7">
+            <div class="maincont" id="A">
+        </a>
+        <div class="left">
+
+            <button id="left-button" class="butt">
+                left-button
+            </button>
+        </div>
+        <p class="mp1" id="A1"> Electronic Items</p>
+        <div class="mp5" id="aa1">
+
+            <div class="mp2" id="content">
+                <div class="mp3" id="A4"><img class="mp4" id="A10" src="images/television.jpg"
+                        alt="This is logo of my clone">
+                    <div>Television</div>
+                </div>
+
+
+                <div class="mp3" id="A4"><img class="mp4" id="A10" src="images/iron.jpg" alt="This is logo of my clone">
+                    <div>Iron</div>
+                </div>
+                <div class="mp3" id="A5"><img class="mp4" id="A11" src="images/laptop.jpg"
+                        alt="This is logo of my clone">
+                    <div>Laptop</div>
+                </div>
+                <div class="mp3" id="A6"><img class="mp4" id="A12" src="images/mobile.jpg"
+                        alt="This is logo of my clone">
+                    <div>Mobile</div>
+                </div>
+                <div class="mp3" id="A7"><img class="mp4" id="A13" src="images/alexa.jpg"
+                        alt="This is logo of my clone">
+                    <div>Alexa</div>
+                </div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/induction.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Induction</div>
+                </div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/microwave.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Microwave</div>
+                </div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/washing machine.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Washing<br>Machine</div>
+                </div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/water purifier.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Water<br>Purifier</div>
+                </div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/grinder.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Grinder</div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <button id="right-button" class="butt">
+                swipe right
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        const rightBtn = document.querySelector('#right-button');
+        const leftBtn = document.querySelector('#left-button');
+
+        rightBtn.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content');
+            conent.scrollLeft += 300;
+            event.preventDefault();
+        });
+
+        leftBtn.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content');
+            conent.scrollLeft -= 300;
+            event.preventDefault();
+        });
+    </script>
+    <a name="link5">
+        <div class="maincont" id="A">
+    </a>
+    <div class="left">
+
+        <button id="left-button1" class="butt">
+            left-button
+        </button>
+    </div>
+    <p class="mp1" id="A1"> Beauty Products</p>
+    <div class="mp5" id="aa1">
+
+        <div class="mp2" id="content1">
+
+            <div class="mp3" id="A3"><img class="mp4" id="A9" src="images/face powder.jpg"
+                    alt="This is logo of my clone">Face <br>Powder</div>
+            <div class="mp3" id="A4"><img class="mp4" id="A10" src="images/facemask.jpeg"
+                    alt="This is logo of my clone">
+                <div> Facemask</div>
+            </div>
+            <div class="mp3" id="A5"><img class="mp4" id="A11" src="images/Eyeliner.jpeg"
+                    alt="This is logo of my clone">Eyeliner </div>
+            <div class="mp3" id="A6"><img class="mp4" id="A12" src="images/nivea.jpeg"
+                    alt="This is logo of my clone">Nivea Cream </div>
+            <div class="mp3" id="A7"><img class="mp4" id="A13" src="images/shampoo.jpeg" alt="This is logo of my clone">
+                <div>Shampoo</div>
+            </div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/antiage.jpeg" alt="This is logo of my clone">
+                <div>Antiage<br>Cream</div>
+            </div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/nail polish.jpg"
+                    alt="This is logo of my clone">
+                <div>Nail<br>Polish</div>
+            </div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/kajal.jpg" alt="This is logo of my clone">
+                <div>Kajal</div>
+            </div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/lipistick.jpg"
+                    alt="This is logo of my clone">
+                <div>Lipistick</div>
+            </div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/facewash.jpeg"
+                    alt="This is logo of my clone">
+                <div>Facewash</div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <button id="right-button1" class="butt">
+            swipe right
+        </button>
+
+    </div>
+
+    </div>
+
+
+    <script>
+        const rightBtn1 = document.querySelector('#right-button1');
+        const leftBtn1 = document.querySelector('#left-button1');
+
+        rightBtn1.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content1');
+            conent.scrollLeft += 300;
+            event.preventDefault();
+        });
+
+        leftBtn1.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content1');
+            conent.scrollLeft -= 300;
+            event.preventDefault();
+        });
+    </script>
+    <a name="link8">
+        <div class="maincont" id="A">
+    </a>
+    <div class="left">
+
+        <button id="left-button2" class="butt">
+            left-button
+        </button>
+    </div>
+    <p class="mp1" id="A1"> Musical Instruments</p>
+    <div class="mp5" id="aa1">
+
+        <div class="mp2" id="content2">
+
+            <div class="mp3" id="A3"><img class="mp4" id="A9" src="images/saxophone.jpeg"
+                    alt="This is logo of my clone">
+                <div>Saxophone</div>
+            </div>
+            <div class="mp3" id="A4"><img class="mp4" id="A10" src="images/flute.jpg" alt="This is logo of my clone">
+                <div>Flute</div>
+            </div>
+            <div class="mp3" id="A5"><img class="mp4" id="A11" src="images/cymbals.jpeg" alt="This is logo of my clone">
+                <div>Cymbals</div>
+            </div>
+            <div class="mp3" id="A6"><img class="mp4" id="A12" src="images/dholak.jpg" alt="This is logo of my clone">
+                <div>Dholak</div>
+            </div>
+            <div class="mp3" id="A7"><img class="mp4" id="A13" src="images/cello.jpeg" alt="This is logo of my clone">
+                <div>Cello</div>
+            </div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/cymbals.jpeg" alt="This is logo of my clone">
+                <div>Cymbals</div>
+            </div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/guitor.jpg" alt="This is logo of my clone">
+                <div>Guitor</div>
+            </div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/veena.jpg" alt="This is logo of my clone">
+                <div>Veena</div>
+            </div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/bongodrum.jpeg"
+                    alt="This is logo of my clone">
+                <div>Bongodrum</div>
+            </div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/drums.jpeg" alt="This is logo of my clone">
+                <div>Drums</div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <button id="right-button2" class="butt">
+            swipe right
+        </button>
+
+    </div>
+
+    </div>
+
+
+    <script>
+        const rightBtn2 = document.querySelector('#right-button2');
+        const leftBtn2 = document.querySelector('#left-button2');
+
+        rightBtn2.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content2');
+            conent.scrollLeft += 300;
+            event.preventDefault();
+        });
+
+        leftBtn2.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content2');
+            conent.scrollLeft -= 300;
+            event.preventDefault();
+        });
+    </script>
+    <a name="link10">
+    <div class="maincont" id="A">
+    </a>
+        <div class="left">
+
+            <button id="left-button3" class="butt">
+                left-button
+            </button>
+        </div>
+        <p class="mp1" id="A1"> Grocery Products</p>
+        <div class="mp5" id="aa1">
+
+            <div class="mp2" id="content3" class="butt">
+
+                <div class="mp3" id="A3"><img class="mp4" id="A9" src="images/fruits.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Fruits</div>
+                </div>
+                <div class="mp3" id="A4"><img class="mp4" id="A10" src="images/vegetables.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Vegetables</div>
+                </div>
+                <div class="mp3" id="A5"><img class="mp4" id="A11" src="images/dairy.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Dairy<br>Products</div>
+                </div>
+                <div class="mp3" id="A6"><img class="mp4" id="A12" src="images/cereals.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Cereals</div>
+                </div>
+                <div class="mp3" id="A7"><img class="mp4" id="A13" src="images/eggs.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Eggs</div>
+                </div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/beverages.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Beverages</div>
+                </div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/frozen.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Frozen<br>foods</div>
+                </div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/snacks.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Snacks</div>
+                </div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/condiments.jpeg"
+                        alt="This is logo of my clone">
+                    <div>condiments</div>
+                </div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/breads.jpeg"
+                        alt="This is logo of my clone">
+                    <div>Breads</div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <button id="right-button3" class="butt">
+                swipe right
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        const rightBtn3 = document.querySelector('#right-button3');
+        const leftBtn3 = document.querySelector('#left-button3');
+
+        rightBtn3.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content3');
+            conent.scrollLeft += 300;
+            event.preventDefault();
+        });
+
+        leftBtn3.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content3');
+            conent.scrollLeft -= 300;
+            event.preventDefault();
+        });
+    </script>
+    <a name="link6">
+        <div class="maincont" id="A">
+    </a>
+
+    <div class="left">
+
+        <button id="left-button4" class="butt">
+            left-button
+        </button>
+    </div>
+    <p class="mp1" id="A1"> Shoes</p>
+    <div class="mp5" id="aa1">
+
+        <div class="mp2" id="content4">
+
+            <div class="mp3" id="A3"><img class="mp4" id="A9" src="images/woodland.jpeg" alt="This is logo of my clone">
+                <div>Woodland</div>
+            </div>
+            <div class="mp3" id="A4"><img class="mp4" id="A10" src="images/relaxo.jpeg" alt="This is logo of my clone"><div>Relaxo</div>
+            </div>
+            <div class="mp3" id="A5"><img class="mp4" id="A11" src="images/sparx.jpeg" alt="This is logo of my clone"><div>Sparx</div>
+            </div>
+            <div class="mp3" id="A6"><img class="mp4" id="A12" src="images/puma.jpeg" alt="This is logo of my clone"><div>Puma</div>
+            </div>
+            <div class="mp3" id="A7"><img class="mp4" id="A13" src="images/paragon.jpeg" alt="This is logo of my clone"><div>Paragon</div>
+            </div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/nike.jpeg"
+                    alt="This is logo of my clone"><div>Nike</div></div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/lancer.jpeg"
+                    alt="This is logo of my clone"><div>Lancer</div></div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/campus.jpeg"
+                    alt="This is logo of my clone"><div>Campus</div></div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/bata.jpeg"
+                    alt="This is logo of my clone"><div>Bata</div></div>
+            <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/addidas.jpeg" alt="This is logo of my clone"><div>Addidas</div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <button id="right-button4" class="butt">
+            swipe right
+        </button>
+
+    </div>
+
+    </div>
+
+
+    <script>
+        const rightBtn4 = document.querySelector('#right-button4');
+        const leftBtn4 = document.querySelector('#left-button4');
+
+        rightBtn4.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content4');
+            conent.scrollLeft += 300;
+            event.preventDefault();
+        });
+
+        leftBtn4.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content4');
+            conent.scrollLeft -= 300;
+            event.preventDefault();
+        });
+    </script>
+    <a name="link9">
+    <div class="maincont" id="A">
+    </a>
+        <div class="left">
+
+            <button id="left-button5" class="butt">
+                left-button
+            </button>
+        </div>
+        <p class="mp1" id="A1"> Toys for Kids</p>
+        <div class="mp5" id="aa1">
+
+            <div class="mp2" id="content5">
+
+                <div class="mp3" id="A3"><img class="mp4" id="A9" src="images/spiderman.jpeg"
+                        alt="This is logo of my clone"> <div>Spiderman</div></div>
+                <div class="mp3" id="A4"><img class="mp4" id="A10" src="images/artandcraft.jpeg" alt="This is logo of my clone"><div>Arts and Craft</div>
+                </div>
+                <div class="mp3" id="A5"><img class="mp4" id="A11" src="images/watertoys.jpeg"
+                        alt="This is logo of my clone"><div>WaterToys</div> </div>
+                <div class="mp3" id="A6"><img class="mp4" id="A12" src="images/carskid.jpeg"
+                        alt="This is logo of my clone"> <div>Cars</div></div>
+                <div class="mp3" id="A7"><img class="mp4" id="A13" src="images/doll.jpeg"
+                        alt="This is logo of my clone"> <div>Dolls</div></div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/educationaltoy.jpeg"
+                        alt="This is logo of my clone"><div>Educational<br>Toys</div></div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/makeupkid.jpeg"
+                        alt="This is logo of my clone"><div>Makeup kit</div></div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/kitchenset.jpeg"
+                        alt="This is logo of my clone"><div>Kitchen Set</div></div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/scooter.jpeg"
+                        alt="This is logo of my clone"><div>Scooter</div></div>
+                <div class="mp3" id="A8"><img class="mp4" id="A14" src="images/softtoy.jpeg"
+                        alt="This is logo of my clone"><div>Soft Toys</div></div>
+            </div>
+        </div>
+        <div class="right">
+            <button id="right-button5" class="butt">
+                swipe right
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        const rightBtn5 = document.querySelector('#right-button5');
+        const leftBtn5 = document.querySelector('#left-button5');
+
+        rightBtn5.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content5');
+            conent.scrollLeft += 300;
+            event.preventDefault();
+        });
+
+        leftBtn5.addEventListener("click", function (event) {
+            const conent = document.querySelector('#content5');
+            conent.scrollLeft -= 300;
+            event.preventDefault();
+        });
+    </script>
+    </div>
+    <a class="fabove" href="#topper">Go to<br>Top</a>
+    <footer>&copy; Copy Write</footer>
+</body>
+
+</html>
